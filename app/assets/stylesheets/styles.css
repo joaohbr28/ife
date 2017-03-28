@@ -1,0 +1,342 @@
+
+body {
+	font-family: "Droid sans", sans-serif;
+	background-color: #FFFFFF;
+	background-image: url(../img/bg.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+	padding-bottom: 60px;
+}
+
+@font-face {
+  font-family: 'Scifly';
+  src: url('../fonts/SciFly-Sans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+	margin: 10px auto .5em;
+	font-weight: 100;
+	font-family: 'Scifly', sans-serif;
+	text-transform: uppercase;
+}
+h2 {
+	margin: 1em auto 1.5em;
+  color: #333333;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+h3 {
+	color: #333D48;
+	margin-bottom: .8em;
+}
+tr[class^=collapse-] td:first-child {
+	padding-left: 40px;
+	color: #333D48;
+	margin-bottom: .8em;
+}
+
+.avatar-pic {
+	height: 50px;
+}
+
+
+.media-body {
+	vertical-align: middle;
+}
+a.media {
+	display: block;
+  border-radius: 30px;
+  padding: 5px;
+}
+a.media:hover {
+	background: #F8F8F8;
+	text-decoration: none;
+}
+.media-left > .fa {
+    padding: 10px 0;
+}
+
+dl dt {
+	margin-top: 10px;
+}
+dl dt:first-child {
+	margin-top: 0
+}
+
+.breadcrumb {
+	background: transparent;
+	/*margin: 0 auto;*/
+	opacity: .75
+}
+.breadcrumb + h1 {
+	margin: 0 10px 2.3em;
+}
+
+fieldset {
+	border-bottom: 1px solid #DDD;
+	padding: 10px 0 20px
+}
+fieldset:last-of-type {
+	border-bottom: none;
+}
+fieldset h3 {
+	margin: 1em auto
+}
+fieldset:first-of-type h3 {
+	margin-top: 0
+}
+textarea.form-control {
+	resize: vertical;
+	max-height: 200px;
+}
+
+
+.navbar-default {
+	margin-bottom: 40px;
+	background: transparent;
+	border: none;
+}
+.user-data {
+	padding: 50px 15px;
+}
+.navbar-form {
+	padding: 36px 15px;
+}
+.divider {
+	color: #CCCCCC;
+	padding: 0 10px;
+}
+.navbar-brand img {
+	max-height: 40px;
+}
+
+
+.panel, .panel-body, .panel-footer {
+	display: block;
+}
+.panel {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+a.panel:hover {
+	position: relative;
+	top: -2px;
+	text-decoration: none;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	transform: rotate(-.5deg);
+}
+
+.nav-pills > li > a {
+	border-radius: 0 100px 100px 0;
+	padding: 10px 15px 10px 0;	
+	color: #666666;
+}
+#main-nav .nav-pills > li > a {
+	display: flex;
+	align-items: center;
+	border-radius: 0;
+	position: relative;
+	width: calc(100% - 40px);
+	height: 80px;
+}
+#main-nav .nav-pills>li.active>a, #main-nav .nav-pills>li.active>a:hover, #main-nav .nav-pills>li.active>a:focus {
+	background: #2E77BE;
+	text-decoration: none;
+}
+.nav-pills > li.active > a:before,
+.nav-pills > li.active > a:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	height: 100%;
+	width: 1000px;
+}
+.nav-pills > li.active > a:before {
+	right: 100%;
+	background: #2E77BE;
+}
+.nav-pills>li>a:hover,
+.nav-pills>li>a:focus {
+	background: transparent;
+	text-decoration: underline;
+}
+
+#main-nav .nav-pills > li.active > a:after {
+	border-left: 40px solid #2E77BE;
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	left: 100%;
+}
+#main-nav .nav-pills>li>a:hover, #main-nav .nav-pills>li>a:focus {
+	background-color: inherit;
+	font-weight: bold;
+	left: 5px 
+}
+.white-bg .nav-tabs {
+  margin: 0 -81px 20px;
+  padding: 0 80px;
+}
+
+
+#main-nav .nav-pills > li > a {
+	width: calc(100% - 50px);
+	height: 80px;
+}
+#main-nav .nav-pills>li.active>a, #main-nav .nav-pills>li.active>a:hover, #main-nav .nav-pills>li.active>a:focus {
+	background: #333D48;
+}
+#main-nav .nav-pills > li.active > a:before {
+	right: 100%;
+	background: #333D48;
+}
+#main-nav .nav-pills > li.active > a:after {
+	border-left: 40px solid #333D48;
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+}
+
+
+.panel {
+	border-radius:0;
+}
+.panel-body {
+	text-align: center;
+	padding: 40px 20px;
+}
+.panel-body > .fa {
+	font-size: 4em;
+}
+.panel-footer {
+  text-align: center;
+  padding: 10px;
+  background: #FFFFFF;
+  color: #333;
+  height: 100px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+.white-bg {
+	background: #FFFFFF;
+	padding: 40px 80px;
+	border: 1px solid #f6f6f6;
+	min-height: 70vh;
+	height: auto;
+	overflow: auto;
+}
+.white-bg > p {
+  font-size: 18px;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
+  text-align: justify;
+}
+.white-bg > ul {
+	margin-bottom: 1.8em
+}
+.white-bg > ul > li {
+	font-size: 18px;
+  margin-bottom: .65em;
+}
+.white-bg .nav-tabs > li {
+	margin-bottom: -1px
+}
+.bootstrap-select.btn-group.bs-container .dropdown-menu {
+	width: 100%;
+}
+.bootstrap-select.btn-group .dropdown-menu li a.opt {
+  position: relative;
+  padding: 6px 20px;
+  white-space: normal;
+}
+.dropdown-header {
+	word-wrap: normal;
+}
+.icon-link {
+	overflow: auto;
+	height: auto;
+	zoom: 1;
+}
+.icon-link > .fa{
+	float: left;
+	display: inline-block;
+	width: 30px;
+}
+.icon-link > span{
+	float: left;
+	display: inline-block;
+	padding: 5px;
+	width: calc(100% - 30px)
+}
+
+
+.main-header {
+	padding-bottom: 20px
+}
+
+
+.gallery-container {
+	margin: 0 auto 80px;
+}
+.gallery-container .nav-tabs {
+	margin: 0 auto 10px;
+	padding: 0;
+}
+.gallery-container .nav-tabs > li > a {
+	position: relative;
+}
+.gallery-container .nav-tabs > li > a:before {
+	content: "\f07b";
+	font-family: "FontAwesome";
+	padding-right: 5px;
+}
+.gallery-container .nav-tabs > li.active > a:before {
+	content: "\f07c";
+	font-family: "FontAwesome";
+	padding-right: 5px;
+}
+
+.gallery .gallery-item {
+  height: 100px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.gallery .gallery-item:hover:before {
+	background: rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 100%;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  content: "\f00e";
+  color: #FFFFFF;
+  font-family: "FontAwesome";
+  font-size: 2em;
+}
+.gallery .gallery-item .img-responsive {
+
+}
+
+/********************/
+/*					*/
+/*		TABLETS		*/
+/*					*/
+/********************/
+/* Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo. */
+
+@media screen and (min-width: 768px) {
+
+	.navbar-brand img {
+		max-height: 90px;
+	}
+
+}
