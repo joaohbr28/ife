@@ -36,6 +36,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a> -->
+          <br>
           <img alt="Icon" src="/assets/logo.png" />
        <image_tag"("logo.png")("icon.png", size: "16x10", alt: "Edit Entry")/>
         </div>
@@ -152,10 +153,19 @@
     <div class="container-fluid">
       <div id="main-nav" class="col-xs-12 col-md-3">
         <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#indice" data-toggle="tab"> Índice</a></li>
+
+        <% @menus.each_with_index do |menu, i| %>
+          
+            <li class="<% if i == 0 %> active <% end %>"><a href="#<%= menu.descricao %>" data-toggle="tab"> <%= menu.descricao %></a></li>
+          <% end %>
+
+
+<!--           <li class="active"><a href="#indice" data-toggle="tab"> Índice</a></li>
           <li><a href="#graduacao" data-toggle="tab"> Graduação</a></li>
           <li><a href="#documentos" data-toggle="tab"> Documentos institucionais</a></li>
           <li><a href="#dimensoes" data-toggle="tab"> Dimensões</a></li>
+ -->
+
         </ul>
       </div>
       <div class="tab-content col-xs-12 col-sm-9">
