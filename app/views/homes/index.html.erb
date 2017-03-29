@@ -154,11 +154,11 @@
       <div id="main-nav" class="col-xs-12 col-md-3">
         <ul class="nav nav-pills nav-stacked">
 
-        <% @menus.each_with_index do |menu, i| %>
-          
-            <li class="<% if i == 0 %> active <% end %>"><a href="#<%= menu.descricao %>" data-toggle="tab"> <%= menu.descricao %></a></li>
-          <% end %>
-
+          <% @menus.each_with_index do |menu, i| %>
+            
+              <li class="<% if i == 0 %> active <% end %>"><a href="#<%= menu.descricao %>" data-toggle="tab"> <%= menu.descricao %></a></li>
+            <% end %>
+ 
 
 <!--           <li class="active"><a href="#indice" data-toggle="tab"> Índice</a></li>
           <li><a href="#graduacao" data-toggle="tab"> Graduação</a></li>
