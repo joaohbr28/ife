@@ -9,7 +9,7 @@
 
     <!-- Styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-select.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
@@ -35,11 +35,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a> -->
-          <br>
-          <img alt="Icon" src="/assets/logo.png" />
+            <br>
+            <img alt="Icon" src="/assets/logo.png" />
        <image_tag"("logo.png")("icon.png", size: "16x10", alt: "Edit Entry")/>
         </div>
+
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <div class="nav navbar-nav navbar-right">
@@ -145,8 +145,6 @@
             </div>
           </form>
         </div><!-- /.navbar-collapse -->
-
-
       </div><!-- /.container-fluid -->
     </nav>
 
@@ -155,9 +153,10 @@
         <ul class="nav nav-pills nav-stacked">
 
           <% @menus.each_with_index do |menu, i| %>
-            
-              <li class="<% if i == 0 %> active <% end %>"><a href="#<%= menu.descricao %>" data-toggle="tab"> <%= menu.descricao %></a></li>
-            <% end %>
+            <li class="<% if i == 0 %> active <% end %>">
+              <a href="#<%= menu.id %>" data-toggle="tab"> <%= menu.descricao %></a>
+            </li>
+          <% end %>
  
 
 <!--           <li class="active"><a href="#indice" data-toggle="tab"> Índice</a></li>
@@ -170,7 +169,7 @@
       </div>
       <div class="tab-content col-xs-12 col-sm-9">
 
-        <div id="indice" class="tab-pane white-bg active">
+        <div id="Índice" class="tab-pane white-bg active">
           <h2>Índice</h2>
           <div class="well">
             <form class="form">
@@ -492,118 +491,36 @@
           </table>
         </div>
 
-        <div id="graduacao" class="tab-pane ">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="medicina.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-stethoscope"></i>
-                </span>
-                <span class="panel-footer">Medicina</span>
-              </a>
+
+
+          <!-- <div id="graduacao" class="tab-pane">
+            <% @menus.each_with_index do |menu, i| %>
+            
+              <li class="<% if i == 0 %> active <% end %>"><a href="#<%= menu.descricao %>" data-toggle="tab"> <%= menu.descricao %></a></li>
+            <% end %>
+
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="medicina.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-medkit"></i>
-                </span>
-                <span class="panel-footer">Enfermagem</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="medicina.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-street-view"></i>
-                </span>
-                <span class="panel-footer">Fisioterapia</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="medicina.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-group"></i>
-                </span>
-                <span class="panel-footer">Psicologia</span>
-              </a>
+ -->
+
+      <% @menus.each_with_index do |menu, i| %>
+          <div id="<%= menu.id %>" class="tab-pane ">
+            <div class="row">       
+              <% menu.indices.each_with_index do |indice, i| %>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <a href="/indices/<%= indice.id %>" class="panel panel-default">
+                      <span class="panel-body">
+                        <i class="<%= indice.icone %>"></i>
+                      </span>
+                      <span class="panel-footer"><%= indice.descricao %></span>
+                    </a>
+                  </div>
+              <% end %>
             </div>
           </div>
-        </div>
+        <% end %>
 
-        <div id="documentos" class="tab-pane">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="enfermagem.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-files-o"></i>
-                </span>
-                <span class="panel-footer">Atas</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="enfermagem.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-user-circle-o"></i>
-                </span>
-                <span class="panel-footer">Corpo docente</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="enfermagem.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-book"></i>
-                </span>
-                <span class="panel-footer">Documentos gerais</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="enfermagem.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-list"></i>
-                </span>
-                <span class="panel-footer">Requisitos legais e normativos</span>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        
 
-        <div id="dimensoes" class="tab-pane">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="organizacao.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-th"></i>
-                </span>
-                <span class="panel-footer">Organização didático-pedagógica</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="corpo-docente.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-user-circle-o"></i>
-                </span>
-                <span class="panel-footer">Corpo docente e tutorial</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="infraestrutura.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-university"></i>
-                </span>
-                <span class="panel-footer">Infraestrutura</span>
-              </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="requisitos-legais.html" class="panel panel-default">
-                <span class="panel-body">
-                  <i class="fa fa-list"></i>
-                </span>
-                <span class="panel-footer">Requisitos legais e normativos</span>
-              </a>
-            </div>
-          </div>
-        </div>
 
 
       </div>
