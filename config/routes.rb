@@ -3,4 +3,8 @@ Rails.application.routes.draw do
    resources :homes
    #root :to => "home#index"
    get '/homes/:id', to: 'home#show'
+
+   resources :indices
+
+   get	"/indices/:id", to: "indices#show"
 end
